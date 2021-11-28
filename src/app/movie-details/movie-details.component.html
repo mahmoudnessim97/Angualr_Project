@@ -1,0 +1,27 @@
+<section class="py-5">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="imgPrefix+MovieDetails?.poster_path" class="w-100" [alt]="MovieDetails.title">
+      </div>
+      <div class="col-md-8 pt-4">
+        <h1>{{MovieDetails?.title}}</h1>
+        <h2 class="h4 c-text">{{MovieDetails?.tagline}}</h2>
+
+        <button class="btn btn-info">crime</button>
+        <button class="btn btn-info">Drama</button>
+        <button class="btn btn-info">Thriller</button>
+        <div class="pt-4">
+          <p>vote : {{MovieDetails?.vote_average}}</p>
+          <p>popularity : {{MovieDetails?.popularity}}</p>
+          <p>vote count : {{MovieDetails?.vote_count}}</p>
+          <p>release date : {{MovieDetails?.release_date}}</p>
+          <h2 class="c-text h4"> {{MovieDetails?.overview}}</h2>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>

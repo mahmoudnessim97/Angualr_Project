@@ -1,0 +1,58 @@
+<app-homeheader [parentData]="trindingMovies"></app-homeheader>
+<div class="container">
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr mb-4 w-25"></div>
+        <h2>Trending<br>Movies<br> to Watch Now </h2>
+        <p class="second-color py-3">Most Watched movies by days</p>
+        <div class="brdr mt-4 w-75"></div>
+      </div>
+    </div>
+    <div *ngFor='let movie of trindingMovies' class="col-md-2">
+      <div class="my-2 movie position-relative">
+        <img [src]='imgPrefix+movie.poster_path' class="w-100" [alt]="movie.title">
+        <h3 class="my-2 h6">{{movie.title}}</h3>
+        <div class="vote">
+          {{movie.vote_average}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr mb-4 w-25"></div>
+        <h2>Trending<br>Tv<br> to Watch Now </h2>
+        <p class="second-color py-3">Most Watched movies by days</p>
+        <div class="brdr mt-4 w-75"></div>
+      </div>
+    </div>
+    <div *ngFor='let tv of trindingTv' class="col-md-2">
+      <div class="my-2 movie position-relative">
+        <img [src]='imgPrefix+tv.poster_path' class="w-100" [alt]="tv.title">
+        <h3 class="my-2 h6">{{tv.title}}</h3>
+        <div class="vote">
+          {{tv.vote_average}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr mb-4 w-25"></div>
+        <h2>Trending<br>People<br> to Watch Now </h2>
+        <p class="second-color py-3">Most Watched movies by days</p>
+        <div class="brdr mt-4 w-75"></div>
+      </div>
+    </div>
+    <div *ngFor='let people of trindingPeople' class="col-md-2">
+      <div class="my-2 movie position-relative">
+        <img [src]='imgPrefix+people.profile_path' class="w-100" [alt]="people.title">
+        <h3 class="my-2 h6">{{people.name}}</h3>
+
+      </div>
+    </div>
+  </div>
+</div>

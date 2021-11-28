@@ -1,0 +1,25 @@
+<section class="py-5">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="imgPrefix+peopleDetails?.profile_path" class="w-100" [alt]="peopleDetails.name">
+      </div>
+      <div class="col-md-8 pt-4">
+        <h1>{{peopleDetails?.name}}</h1>
+        <h2 class="h4 c-text">{{peopleDetails?.place_of_birth}}</h2>
+
+
+        <div class="pt-4">
+          <p>known_for_department : {{peopleDetails?.known_for_department}}</p>
+          
+          <p>birthday : {{peopleDetails?.birthday}}</p>
+          <p>popularity : {{peopleDetails?.popularity}}</p>
+          <h2 class="c-text h4"> {{peopleDetails?.biography}}</h2>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
